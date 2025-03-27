@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 
+.row {
+    margin: 0;
+}
+
 /* Prelaoder */
 #preloader {
     position: fixed;
@@ -82,6 +86,66 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #1abc9c;
+    color: white;
+    padding: 8px;
+    z-index: 10000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Screen reader text */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+    color: #1abc9c;
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: block;
+}
+
+/* Focus outline */
+:focus {
+    outline: 2px solid #1abc9c;
+    outline-offset: 2px;
+}
+
+/* Enhance color contrast */
+body {
+    // ...existing code...
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -91,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 72px;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 9997;
+    z-index: 2;
 }
 
 #header #logo {
@@ -225,6 +289,11 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+#hero .btn-get-started:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -268,21 +337,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Nav Menu Arrows */
-.sf-arrows .sf-with-ul {
+.menu-has-children a {
     padding-right: 30px;
 }
 
-.sf-arrows .sf-with-ul:after {
+.menu-has-children a:after {
     content: "\f107";
-    position: absolute;
-    right: 15px;
+    margin-left: 5px;
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
-}
-
-.sf-arrows ul .sf-with-ul:after {
-    content: "\f105";
 }
 
 /* Nav Meu Container */
@@ -338,6 +402,11 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleX(1);
 }
 
+.nav-menu a:focus {
+    color: #fff;
+    background: #1abc9c;
+}
+
 .nav-menu ul {
     margin: 4px 0 0 0;
 }
@@ -357,6 +426,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu ul li a:hover {
     background: #2dc997;
+    color: #fff;
+}
+
+.nav-menu ul li a:focus {
+    background: #1abc9c;
     color: #fff;
 }
 
@@ -397,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 18px;
     bottom: 0;
     z-index: 998;
-    background: rgba(52, 59, 64, 0.9);
+    background: rgba(52, 59, 64, 0.95);
     left: -260px;
     width: 260px;
     overflow-y: auto;
@@ -418,16 +492,21 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     font-size: 16px;
     overflow: hidden;
-    padding: 10px 22px 10px 15px;
+    padding: 12px 20px;
     position: relative;
     text-decoration: none;
     width: 100%;
     display: block;
     outline: none;
+    line-height: 1.5;
 }
 
 #mobile-nav ul li a:hover {
     color: #fff;
+}
+
+#mobile-nav ul li a:focus {
+    background: #1abc9c;
 }
 
 #mobile-nav ul li li {
@@ -448,7 +527,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-    color: #2dc997;
+    color: #fff;
+    background: #1abc9c;
 }
 
 #mobile-body-overly {
@@ -505,7 +585,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-header .section-description {
     text-align: center;
-    color: #999;
+    color: #666;
 }
 
 /* About Us Section
@@ -1055,6 +1135,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     background: #f8f9fa;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 #services .box:hover {
@@ -1164,6 +1245,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #team .member {
     text-align: center;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 #team .member .pic {
@@ -1200,6 +1282,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #2dc997;
 }
 
+#team .member .social a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 #team .member .social i {
     font-size: 18px;
     margin: 0 2px;
@@ -1223,7 +1310,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .info i {
-    font-size: 32px;
+    font-size: 20px;
     color: #1abc9c;
     float: left;
     margin-right: 20px;
@@ -1259,11 +1346,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 45px;
     transition: 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 #contact .social-links a:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#contact .social-links a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
 }
 
 /* Contact Action Section
@@ -1304,10 +1397,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-top: 10px;
     text-align: center;
     font-size: 13px;
-    color: #ccc;
+    color: #ddd;
 }
-
-
 
 .embed-responsive {
     position: relative;
@@ -1352,6 +1443,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #1abc9c;
     background: transparent;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-inverted:hover {
@@ -1359,4 +1451,29 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-inverted:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Focus visible */
+[tabindex]:not([tabindex="-1"]):focus {
+    outline: 2px solid #1abc9c;
+    outline-offset: 2px;
+}
+
+/* Mejorar interacción con elementos interactivos */
+.box,
+.icon-box,
+.member,
+.social-links a {
+    cursor: pointer;
+}
+
+/* Estado activo del menú */
+.nav-menu .menu-active > a,
+#mobile-nav ul .menu-item-active {
+    color: #fff;
 }

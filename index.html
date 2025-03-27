@@ -53,26 +53,28 @@
   </head>
 
   <body>
-    <header id="header">
+    <a href="#main" class="skip-link screen-reader-text">Saltar al contenido principal</a>
+    
+    <header id="header" role="banner">
       <div class="container">
         <div id="logo" class="pull-left">
           <a href="#hero">
             <img
               src="img/folque/logo3.png"
-              alt=""
-              title=""
+              alt="Logo de Folqué"
+              title="Folqué - Asociación de Bal Folk en Madrid"
               style="margin-top: -10px; width: 180px"
             />
           </a>
         </div>
 
-        <nav id="nav-menu-container">
+        <nav id="nav-menu-container" role="navigation" aria-label="Menú principal">
           <ul class="nav-menu">
-            <li class="menu-active"><a href="#about">Folqué?</a></li>
+            <li class="menu-active"><a href="#about" aria-current="page">Folqué?</a></li>
             <li class="menu-has-children">
-              <a href="#0">Proyectos</a>
-              <ul>
-                <li><a href="https://folquemadrid.wixsite.com/cenizas" target="_blank">Cenizas</a></li>
+              <a href="#0" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+              <ul role="menu">
+                <li><a href="https://folquemadrid.wixsite.com/cenizas" target="_blank" rel="noopener">Cenizas <span class="screen-reader-text">(abre en nueva ventana)</span></a></li>
                 <li><a href="https://folquemadrid.wixsite.com/fenixfest" target="_blank">Fénix</a></li>
                 <li>
                   <a href="https://folquemadrid.wixsite.com/bailando" target="_blank">Bailando entre Montañas</a>
@@ -149,7 +151,7 @@
     </section>
     <!-- #hero -->
 
-    <main id="main">
+    <main id="main" role="main">
       <!--==========================
       About Us Section
     ============================-->
@@ -603,10 +605,6 @@
               que puede manifestarse de tres modos:
             </p>
 
-            <!--<div class="embed-responsive embed-responsive-16by9" >
-                    <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/UhCgU3AkFcU"></iframe>
-                </div>-->
-
             <div class="col-lg-6 content order-lg-1 order-2">
               <div class="icon-box wow fadeInUp">
                 <div class="icon"><i class="fa fa-bullseye"></i></div>
@@ -643,7 +641,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 order-lg-2 order-1 wow fadeInRight">
+            <div class="col-lg-6 order-lg-2 order-1 wow fadeInRight mb-5">
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe
                   class="embed-responsive-item"
@@ -681,32 +679,24 @@
             ></div>
 
             <div class="col-lg-6 content order-lg-2 order-2">
-              <p class="text-justify">
-                El <strong>Bal Folk</strong> es un género con raíces en la
-                música y danza tradicionales de Europa y que se caracteriza por
-                una apertura a la innovación, interpretación individual y fusión
-                con otros estilos, de manera que cada bailarín imprime su propia
-                esencia dentro de la danza.
-              </p>
-              <p class="text-justify">
-                Es, por tanto, un género vivo que evoluciona, haciéndonos formar
-                parte de la tradición. Existe una participación muy activa del
-                público yl baile e no está tan relacionado con la memoria de un
-                pueblo sino que se encuentra ligada al placer de la danza en sí
-                misma y su vivencia en el presente.
-              </p>
-              <p class="text-justify">
-                En un <strong>baile folk</strong>, se bailan músicas escogidas
-                entre las composiciones tradicionales, así como entre las
-                composiciones actuales propias de los músicos que se inmiscuyen
-                e imprimen su esencia en este género. Existe una enorme variedad
-                de danzas originarias de toda europa:
-                <strong
-                  >valses, mazurkas, polskas, bourrées, scottiches, círculos
-                  circasianos, chappelloises, fandangos Vascos, andros,
-                  repasseados...</strong
-                >
-              </p>
+                <p class="text-justify">
+                El <strong>Bal Folk</strong> tiene raíces en la música y danza
+                tradicionales de Europa, destacando por su apertura a la
+                innovación y fusión con otros estilos, permitiendo que cada
+                bailarín aporte su esencia a la danza.
+                </p>
+                <p class="text-justify">
+                Es un género vivo que evoluciona, conectándonos con la tradición
+                mientras disfrutamos del placer de la danza en el presente, con
+                una participación muy activa del público.
+                </p>
+                <p class="text-justify">
+                En un <strong>baile folk</strong>, se interpretan tanto
+                composiciones tradicionales como actuales, con una gran variedad
+                de danzas europeas como <strong>valses, mazurkas, polskas,
+                bourrées, scottiches, círculos circasianos, chappelloises,
+                fandangos vascos, andros, repasseados...</strong>
+                </p>
             </div>
           </div>
         </div>
@@ -890,30 +880,24 @@
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-4">
               <div class="info row justify-content-center">
-                <div>
-                  <i class="fa fa-envelope"></i>
                   <p>
+                    <i class="fa fa-envelope"></i>
                     <a href="mailto:folquemadrid@gmail.com"
                       >folquemadrid@gmail.com</a
                     >
                   </p>
-                </div>
-
-                <div>
-                  <i class="fa fa-phone"></i>
+                  
                   <p>
+                    <i class="fa fa-phone"></i>
                     Francesco Palmeri:
                     <a href="tel:+34617123144">+34 617 12 31 44</a>
                   </p>
-                </div>
 
-                <div>
-                  <i class="fa fa-phone"></i>
                   <p>
+                    <i class="fa fa-phone"></i>
                     María Cubero:
                     <a href="tel:+34652483969">+34 652 48 39 69</a>
                   </p>
-                </div>
               </div>
             </div>
 
