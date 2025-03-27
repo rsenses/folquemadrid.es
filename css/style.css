@@ -9,17 +9,19 @@
 --------------------------------------------------------------*/
 body {
     background: #fff;
-    color: #666666;
+    color: #333333;
     font-family: "Open Sans", sans-serif;
-    font-size: .9rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 a {
-    color: #2dc997;
+    color: #1abc9c;
+    transition: all 0.3s ease;
 }
 
 a:hover, a:active, a:focus {
-    color: #2dca98;
+    color: #16a085;
     outline: none;
     text-decoration: none;
 }
@@ -31,9 +33,10 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0 0 20px 0;
     padding: 0;
+    letter-spacing: -0.02em;
 }
 
 /* Prelaoder */
@@ -83,14 +86,12 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-    padding: 30px 0;
-    height: 92px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    transition: all 0.5s;
-    z-index: 997;
+    background: #333;
+    padding: 20px 0;
+    height: 72px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 #header #logo {
@@ -127,7 +128,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-fixed {
-    background: rgba(52, 59, 64, 0.9);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 20px 0;
     height: 72px;
     transition: all 0.5s;
@@ -137,6 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+    position: relative;
     display: table;
     width: 100%;
     height: 100vh;
@@ -146,8 +150,20 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center center;
 }
 
+#hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+}
+
 #hero .hero-container {
-    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+    background: transparent;
     display: table-cell;
     margin: 0;
     padding: 0 10px;
@@ -188,21 +204,23 @@ h1, h2, h3, h4, h5, h6 {
 #hero .btn-get-started {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
-    padding: 8px 28px;
+    padding: 12px 32px;
     border-radius: 50px;
-    transition: 0.5s;
+    transition: 0.3s;
     margin: 10px;
-    border: 2px solid #fff;
-    color: #fff;
+    border: none;
+    background: #1abc9c;
+    color: white;
 }
 
 #hero .btn-get-started:hover {
-    background: #2dc997;
-    border: 2px solid #2dc997;
+    background: #16a085;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /*--------------------------------------------------------------
@@ -220,7 +238,8 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     top: 100%;
     left: 0;
-    z-index: 99;
+    padding: 10px;
+    background: #333;
 }
 
 .nav-menu li {
@@ -283,9 +302,10 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     color: #fff;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     outline: none;
 }
 
@@ -316,11 +336,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu ul {
     margin: 4px 0 0 0;
-    border: 1px solid #e7e7e7;
-}
-
-.nav-menu ul li {
-    background: #fff;
 }
 
 .nav-menu ul li:first-child {
@@ -329,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu ul li a {
     padding: 10px;
-    color: #333;
+    color: #fff;
     transition: 0.3s;
     display: block;
     font-size: 13px;
@@ -462,12 +477,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Sections Header
 --------------------------------*/
 .section-header .section-title {
-    font-size: 32px;
-    color: #111;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #222;
+    text-transform: none;
     text-align: center;
-    font-weight: 700;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-header .section-title:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #1abc9c;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section-header .section-description {
@@ -642,11 +671,29 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #fafafa;
 }
 
+.project .about-container {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.project-grey .about-container {
+    background: #fafafa;
+}
+
 .project .about-container .background {
     min-height: 300px;
     background-size:     contain;
     background-repeat:   no-repeat;
     background-position: center center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project .about-container .background:hover {
+    transform: scale(1.02);
 }
 
 #about-lunes-folk.project .about-container .background {
@@ -984,14 +1031,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Facts Section
 --------------------------------*/
 #facts {
-    background: #f7f7f7;
-    padding: 80px 0 60px 0;
+    background: #fff;
+    padding: 80px 0;
 }
 
 #facts .counters span {
     font-size: 48px;
     display: block;
     color: #2dc997;
+}
+
+#facts .counters span i {
+    font-size: 42px;
+    color: #1abc9c;
+    margin-bottom: 15px;
 }
 
 #facts .counters p {
@@ -1009,29 +1062,34 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .box {
-    padding: 50px 20px;
-    margin-bottom: 50px;
+    padding: 30px;
+    margin-bottom: 60px;
     text-align: center;
-    border: 1px solid #e6e6e6;
+    border: none;
+    border-radius: 12px;
     height: 550px;
     position: relative;
-    background: #fafafa;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#services .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 #services .icon {
-    position: absolute;
-    top: -36px;
-    left: calc(50% - 36px);
-    transition: 0.2s;
-    border-radius: 50%;
-    display: inline-block;
-    border: 6px solid #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
 }
 
 #services .icon a {
     display: inline-block;
-    background: #2dc997;
-    border: 2px solid #2dc997;
+    background: #1abc9c;
+    border: none;
     padding: 16px;
     border-radius: 50%;
     transition: 0.3s;
@@ -1258,8 +1316,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Contact Section
 --------------------------------*/
 #contact {
-    background: #f7f7f7;
-    padding: 40px 0 40px 0;
+    background: #fafafa;
+    padding: 60px 0;
 }
 
 #contact #google-map {
@@ -1274,8 +1332,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .info i {
     font-size: 32px;
-    color: #2dc997;
+    color: #1abc9c;
     float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
 }
 
 #contact .info p {
@@ -1296,21 +1356,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #333;
+    background: #1abc9c;
     color: #fff;
     line-height: 1;
-    padding: 8px 0;
-    margin-left: 3px;
+    padding: 12px 0;
+    margin: 0 8px;
     border-radius: 50%;
     text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 #contact .social-links a:hover {
-    background: #2dc997;
-    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 #contact .form #sendmessage {
@@ -1437,20 +1498,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 .btn-inverted {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
-    padding: 8px 28px;
+    padding: 12px 32px;
     border-radius: 50px;
     transition: 0.5s;
     margin: 10px;
-    border: 2px solid #2dc997;
-    color: #2dc997;
-    background: #fff;
+    border: 2px solid #1abc9c;
+    color: #1abc9c;
+    background: transparent;
+    transition: all 0.3s ease;
 }
 
 .btn-inverted:hover {
-    background: #2dc997;
+    background: #1abc9c;
     color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
