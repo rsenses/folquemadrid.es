@@ -634,52 +634,71 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* About Us Section
 --------------------------------*/
-#about-lunes-folk {
-        background: #fafafa;
+.project {
     padding: 80px 0;
 }
 
-#about-lunes-folk .about-container .background {
+.project-grey {
+    background: #fafafa;
+}
+
+.project .about-container .background {
     min-height: 300px;
-    background: url(../img/folque/lunesfolk.jpg)/* center top no-repeat*/;
     background-size:     contain;
     background-repeat:   no-repeat;
     background-position: center center;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
-#about-lunes-folk .about-container .content {
+#about-lunes-folk.project .about-container .background {
+    background-image: url(../img/proyectos/lunes.jpg)/* center top no-repeat*/;
+}
+#about-bem.project .about-container .background {
+    background-image: url(../img/proyectos/bem.jpg)/* center top no-repeat*/;
+}
+#about-basil.project .about-container .background {
+    background-image: url(../img/proyectos/basil.jpg)/* center top no-repeat*/;
+}
+#about-cenizas.project .about-container .background {
+    background-image: url(../img/proyectos/cenizas.jpg)/* center top no-repeat*/;
+}
+#about-fenix.project .about-container .background {
+    background-image: url(../img/proyectos/fenix.jpg)/* center top no-repeat*/;
+}
+#about-tango.project .about-container .background {
+    background-image: url(../img/proyectos/tango.jpg)/* center top no-repeat*/;
+}
+
+.project.project-grey .about-container .content {
     background: #fafafa;
 }
 
-#about-lunes-folk .about-container .title {
+.project .about-container .title {
     color: #333;
     font-weight: 700;
     font-size: 32px;
 }
 
 @media (max-width: 768px) {
-    #about-lunes-folk .about-container .title {
+    .project .about-container .title {
         padding-top: 15px;
     }
 }
 
-#about-lunes-folk .about-container p {
+.project .about-container p {
     line-height: 22px;
 }
 
-#about-lunes-folk .about-container p:last-child {
+.project .about-container p:last-child {
     margin-bottom: 0;
 }
 
-#about-lunes-folk .about-container .icon-box {
+.project .about-container .icon-box {
     background: #fafafa;
     background-size: cover;
     padding: 0 0 30px 0;
 }
 
-#about-lunes-folk .about-container .icon-box .icon {
+.project .about-container .icon-box .icon {
     float: left;
     background: #fafafa;
     padding: 16px;
@@ -687,12 +706,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: 2px solid #2dc997;
 }
 
-#about-lunes-folk .about-container .icon-box .icon i {
+.project .about-container .icon-box .icon i {
     color: #2dc997;
     font-size: 24px;
 }
 
-#about-lunes-folk .about-container .icon-box .title {
+.project .about-container .icon-box .title {
     margin-left: 70px;
     font-weight: 500;
     margin-bottom: 4px;
@@ -700,87 +719,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-transform: uppercase;
 }
 
-#about-lunes-folk .about-container .icon-box .title a {
+.project .about-container .icon-box .title a {
     color: #111;
 }
 
-#about-lunes-folk .about-container .icon-box .description {
-    margin-left: 70px;
-    line-height: 18px;
-    font-size: 12px;
-}
-
-#about-neo-trad {
-        background: #fafafa;
-    padding: 80px 0;
-}
-
-#about-neo-trad .about-container .background {
-    min-height: 380px;
-    background: url(../img/folque/neotrad.jpg)/* center top no-repeat*/;
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center center;
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
-
-#about-neo-trad .about-container .content {
-    background: #fafafa;
-}
-
-#about-neo-trad .about-container .title {
-    color: #333;
-    font-weight: 700;
-    font-size: 32px;
-}
-
-@media (max-width: 768px) {
-    #about-neo-trad .about-container .title {
-        padding-top: 15px;
-    }
-}
-
-#about-neo-trad .about-container p {
-    line-height: 22px;
-}
-
-#about-neo-trad .about-container p:last-child {
-    margin-bottom: 0;
-}
-
-#about-neo-trad .about-container .icon-box {
-    background: #fafafa;
-    background-size: cover;
-    padding: 0 0 30px 0;
-}
-
-#about-neo-trad .about-container .icon-box .icon {
-    float: left;
-    background: #fafafa;
-    padding: 16px;
-    border-radius: 50%;
-    border: 2px solid #2dc997;
-}
-
-#about-neo-trad .about-container .icon-box .icon i {
-    color: #2dc997;
-    font-size: 24px;
-}
-
-#about-neo-trad .about-container .icon-box .title {
-    margin-left: 70px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-#about-neo-trad .about-container .icon-box .title a {
-    color: #111;
-}
-
-#about-neo-trad .about-container .icon-box .description {
+.project .about-container .icon-box .description {
     margin-left: 70px;
     line-height: 18px;
     font-size: 12px;
@@ -875,84 +818,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about-nosotros .about-container .icon-box .description {
-    margin-left: 70px;
-    line-height: 18px;
-    font-size: 12px;
-}
-
-/* About bailando-montanas
---------------------------------*/
-#about-bailando-montanas {
-    background: #fff;
-    padding: 80px 0;
-}
-
-#about-bailando-montanas .about-container .background {
-    min-height: 300px;
-    background: url(../img/folque/bailandomontanas.jpg)/* center top no-repeat*/;
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#about-bailando-montanas .about-container .content {
-    background: #fff;
-}
-
-#about-bailando-montanas .about-container .title {
-    color: #333;
-    font-weight: 700;
-    font-size: 32px;
-}
-
-@media (max-width: 768px) {
-    #about-bailando-montanas .about-container .title {
-        padding-top: 15px;
-    }
-}
-
-#about-bailando-montanas .about-container p {
-    line-height: 22px;
-}
-
-#about-bailando-montanas .about-container p:last-child {
-    margin-bottom: 0;
-}
-
-#about-bailando-montanas .about-container .icon-box {
-    background: #fff;
-    background-size: cover;
-    padding: 0 0 30px 0;
-}
-
-#about-bailando-montanas .about-container .icon-box .icon {
-    float: left;
-    background: #fff;
-    padding: 16px;
-    border-radius: 50%;
-    border: 2px solid #2dc997;
-}
-
-#about-bailando-montanas .about-container .icon-box .icon i {
-    color: #2dc997;
-    font-size: 24px;
-}
-
-#about-bailando-montanas .about-container .icon-box .title {
-    margin-left: 70px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-#about-bailando-montanas .about-container .icon-box .title a {
-    color: #111;
-}
-
-#about-bailando-montanas .about-container .icon-box .description {
     margin-left: 70px;
     line-height: 18px;
     font-size: 12px;
@@ -1566,4 +1431,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .embed-responsive-4by3 {
     padding-bottom: 75%;
+}
+
+/* Inverted button style */
+.btn-inverted {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #2dc997;
+    color: #2dc997;
+    background: #fff;
+}
+
+.btn-inverted:hover {
+    background: #2dc997;
+    color: #fff;
 }
