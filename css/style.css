@@ -100,8 +100,8 @@ h6 {
   left: 0;
   background: #1abc9c;
   color: white;
-  padding: 8px;
-  z-index: 10000;
+  padding: 10px;
+  z-index: 100;
   transition: top 0.3s;
 }
 
