@@ -1509,3 +1509,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 #mobile-nav ul .menu-item-active {
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Custom Styles from Inline
+--------------------------------------------------------------*/
+/* Header Logo */
+#header #logo img {
+  margin-top: -10px; /* Moved from inline style */
+}
+
+/* Service Images */
+#services .box .service-img {
+  max-height: 180px; /* Moved from inline style */
+  width: 100%; /* Ensure image scales within container */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Team Section Spacing */
+#team .team-intro-spacing {
+  padding-top: 20px; /* Moved from inline style */
+}
+
+/* EU Logo in Contact Section */
+#contact .ue .eu-logo {
+  max-height: 100px; /* Moved from inline style */
+  padding: 20px 0; /* Moved from inline style */
+}
